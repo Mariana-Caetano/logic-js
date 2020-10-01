@@ -1,0 +1,20 @@
+<!--Demanda: crie um programa que peça 
+para o usuário informar um login e uma senha.
+Se o login for igual a "caelum" e a senha for igual "123"
+exiba na tela, "Login efetuado com sucesso".
+Caso contrário, exiba em um alerta "Login
+inválido! Tente novamente-->
+
+<meta charset="utf-8" />
+<h1>Área restrita</h1>
+<script>
+  var login = prompt('Login: ');
+  var senha = prompt('Senha: ');
+
+  while (login != 'caelum' || senha != '123') {
+    alert('Login inválido, tente novamente!');
+    login = prompt('Login: ');
+    senha = prompt('Senha: ');
+  }
+  document.write('Login efetuado com sucesso!');
+</script>
