@@ -1,0 +1,33 @@
+<meta charset="utf-8" />
+<h1>Salário Novo</h1>
+<script>
+  var salario = parseFloat(
+    prompt('Qual o seu salário atual?').replace(',', '.')
+  );
+  var bonus = parseFloat(
+    prompt('Qual o valor do Bônus que recebeu?').replace(',', '.')
+  );
+  var salarioNovo = salario + bonus;
+  document.write(
+    'Seu salário novo é: ' + salarioNovo.toFixed(2).replace('.', ',')
+  );
+</script>
+
+<!-- Demanda: crie um programa que 
+  peça o salário atual
+de um funcionário e o valor do bônus
+recebido e exiba o salário novo
+
+Do que preciso:
+1- Valor Salário
+2- Valor do bônus
+
+Passo a passo:
+1- Pedir Salário atual
+2- Pedir Bônus
+3- Calcular 
+4- Exibar o resultado
+
+parseFloat = converter os valores de forma explícita (exemplo, 
+neste caso texto em números)
+-->
