@@ -1,0 +1,50 @@
+<!--Demanda: Crie um programa que peça para o usuário informar
+o valor do seu saldo, o valor do crédito que possui
+e o valor total dos débitos que realizou. Calcule 
+o saldo atualizado e exiba na tela se o saldo está 
+negativo ou positivo
+
+Fórmula:
+saldo atualizado = saldo = debito + credito
+
+Do que eu preciso:
+1- Valor do saldo
+2- Valor do crédito
+3- Valor total dos débitos realizados
+
+
+Passo a passo
+1-Pedir para informar saldo
+2- Pedir para informar crédito
+3- Pedir para informar o valor dos débitos
+4- Calcular o saldo atualizado;
+5- Mostrar na telas o saldo atualizado
+6- Se o saldo atualizado está negativo mostrar:
+Status: SALDO NEGATIVO
+7- Se não mostrar:
+Status: SALDO POSITIVO
+-->
+
+<meta charset="utf-8" />
+<h1>Saldo Bancário</h1>
+<script>
+  var saldo = parseFloat(prompt('Saldo : ').replace(',', '.'));
+  var credito = parseFloat(
+    prompt('Valor do crédito que possui: ').replace(',', '.')
+  );
+  var totalDebitos = parseFloat(
+    prompt('Valor do total de débitos que realizou: ').replace(',', '.')
+  );
+  var saldoAtualizado = saldo - totalDebitos + credito;
+
+  document.write(
+    'Seu saldo atualizado é: ' + saldoAtualizado.toFixed(2).replace('.', ',')
+  );
+  document.write('<br>');
+
+  if (saldoAtualizado < 0) {
+    document.write('Seu saldo está negativo!');
+  } else {
+    document.write('Seu saldo está positivo');
+  }
+</script>
